@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CampusDoc Agent</title>
+  <link rel="stylesheet" href="/static/agent.css" />
+</head>
+<body>
+  <div class="layout">
+    <aside>
+      <p class="logo">CampusDoc Agent</p>
+      <h1>文档处理 Agent</h1>
+      <p class="desc">Tool-Calling · RAG · 数据清洗 · 概念题批改</p>
+      <div class="status" id="status">检测中…</div>
+      <h2>试试这些问题</h2>
+      <div class="prompts" id="prompts">
+        <button data-q="什么是 RAG？请先检索知识库再回答。">RAG 是什么</button>
+        <button data-q="请清洗下面表格：&#10;姓名, 成绩 ,备注&#10;张三,,优秀&#10;李四, 88 ,&#10; ,90,及格&#10;王五,abc,异常">清洗脏数据</button>
+        <button data-q="批改概念题：题目=什么是封装？学生答=把数据和操作放在一起隐藏细节。请先检索课本再评分。">概念题批改</button>
+        <button data-q="总结：本系统实现了选课、排课、成绩与 AI 作业批改，概念题批改前会检索课本片段。">文档总结</button>
+      </div>
+      <p class="hint">无 API Key 时自动 Demo 模式，仍会调用真实本地工具。</p>
+    </aside>
+    <main>
+      <div id="log" class="log"></div>
+      <form id="form">
+        <textarea id="input" rows="3" placeholder="描述你的任务，例如：检索封装相关课本内容…"></textarea>
+        <button type="submit" id="send">发送</button>
+      </form>
+    </main>
+  </div>
+  <script src="/static/agent.js"></script>
+</body>
+</html>
