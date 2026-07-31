@@ -2,6 +2,7 @@
 Thumbs.db
 *.class
 __pycache__/
+*.pyc
 .env
 .idea/
 .vscode/
