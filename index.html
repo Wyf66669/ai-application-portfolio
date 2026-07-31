@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>温耀方 · AI 应用工程作品集</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <a class="brand" href="#top">WYF</a>
+    <nav>
+      <a href="#fit">岗位匹配</a>
+      <a href="#projects">项目</a>
+      <a href="#algo">算法</a>
+      <a href="#stack">技术栈</a>
+      <a href="#contact">联系</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <p class="eyebrow">AI Application Engineer Portfolio</p>
+      <h1>温耀方</h1>
+      <p class="tagline">把 LLM / Agent 能力做成可落地的业务工具<br />Java · Vue · RAG · DeepSeek · 教务系统 AI 批改</p>
+      <div class="cta-row">
+        <a class="btn primary" href="#projects">查看项目</a>
+        <a class="btn ghost" href="https://github.com/Wyf66669/ai-application-portfolio" target="_blank" rel="noopener">GitHub 仓库</a>
+      </div>
+    </section>
+
+    <section id="fit" class="section">
+      <h2>与岗位的匹配点</h2>
+      <p class="section-lead">面向「AI 应用工程 / 平台维护」：Agent 落地、前后端维护、工具链打通。</p>
+      <div class="fit-grid">
+        <article class="card">
+          <h3>Agent / LLM 应用</h3>
+          <p>在教务系统中接入 DeepSeek，完成作业/考试发布与自动批改；概念题采用「课本检索 + Prompt」的轻量 RAG 流程。</p>
+        </article>
+        <article class="card">
+          <h3>前后端能力</h3>
+          <p>Spring Boot + MyBatis 后端，Vue 3 前端；熟悉 REST 联调、JWT 鉴权、中间件（Tomcat / Redis）部署。</p>
+        </article>
+        <article class="card">
+          <h3>工程化与维护</h3>
+          <p>独立完成需求分析、分层开发、异常降级与答辩交付；具备算法题训练与模块测试用例编写经验。</p>
+        </article>
+        <article class="card">
+          <h3>可延伸方向</h3>
+          <p>了解 Dify 知识库 / Workflow API 对接思路；可用 Python 做脚本与 Agent 编排扩展，服务内部赋能场景。</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="projects" class="section">
+      <h2>重点项目</h2>
+      <article class="project featured">
+        <div class="project-meta">
+          <span class="pill">毕设 · 已答辩通过</span>
+          <span class="pill accent">AI 集成</span>
+        </div>
+        <h3>教务管理系统 · AI 作业/考试发布与批改</h3>
+        <p>前后端分离的教务平台：选课、排课、成绩、考勤、作业考试等。重点将 LLM 能力做成业务功能——教师一键 AI 组卷发布，学生提交后客观题规则判分、主观题 AI 评分并生成评语；概念题先检索课本片段再批改（RAG）。</p>
+        <ul class="tech-list">
+          <li>Spring Boot</li>
+          <li>MyBatis</li>
+          <li>MySQL</li>
+          <li>Vue 3</li>
+          <li>DeepSeek API</li>
+          <li>JWT</li>
+          <li>Redis</li>
+        </ul>
+        <div class="flow">
+          <div class="flow-step"><strong>01</strong><span>需求与表结构设计</span></div>
+          <div class="flow-step"><strong>02</strong><span>分层接口开发</span></div>
+          <div class="flow-step"><strong>03</strong><span>RAG 检索课本</span></div>
+          <div class="flow-step"><strong>04</strong><span>DeepSeek 批改</span></div>
+          <div class="flow-step"><strong>05</strong><span>结果落库 + 通知</span></div>
+        </div>
+        <a class="text-link" href="projects/academic-affairs/README.md">项目说明文档 →</a>
+      </article>
+    </section>
+
+    <section id="algo" class="section">
+      <h2>算法能力</h2>
+      <p class="section-lead">精选 Hot 100 常见题，展示数据结构与双指针 / 滑动窗口 / 前缀和等工程思维。</p>
+      <div class="algo-table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>题目</th>
+              <th>类型</th>
+              <th>复杂度</th>
+              <th>代码</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>字母异位词分组</td>
+              <td>HashMap · 排序</td>
+              <td>O(n·k log k)</td>
+              <td><a href="algorithms/GroupAnagrams.java">GroupAnagrams.java</a></td>
+            </tr>
+            <tr>
+              <td>最长连续序列</td>
+              <td>HashSet</td>
+              <td>O(n)</td>
+              <td><a href="algorithms/LongestConsecutive.java">LongestConsecutive.java</a></td>
+            </tr>
+            <tr>
+              <td>盛最多水的容器</td>
+              <td>双指针</td>
+              <td>O(n)</td>
+              <td><a href="algorithms/MaxArea.java">MaxArea.java</a></td>
+            </tr>
+            <tr>
+              <td>三数之和</td>
+              <td>排序 · 双指针</td>
+              <td>O(n²)</td>
+              <td><a href="algorithms/ThreeSum.java">ThreeSum.java</a></td>
+            </tr>
+            <tr>
+              <td>接雨水</td>
+              <td>双指针</td>
+              <td>O(n)</td>
+              <td><a href="algorithms/Trap.java">Trap.java</a></td>
+            </tr>
+            <tr>
+              <td>无重复字符最长子串</td>
+              <td>滑动窗口</td>
+              <td>O(n)</td>
+              <td><a href="algorithms/LengthOfLongestSubstring.java">LengthOfLongestSubstring.java</a></td>
+            </tr>
+            <tr>
+              <td>找到字符串中所有异位词</td>
+              <td>滑动窗口 · 频次</td>
+              <td>O(n)</td>
+              <td><a href="algorithms/FindAnagrams.java">FindAnagrams.java</a></td>
+            </tr>
+            <tr>
+              <td>和为 K 的子数组</td>
+              <td>前缀和 · HashMap</td>
+              <td>O(n)</td>
+              <td><a href="algorithms/SubarraySum.java">SubarraySum.java</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="stack" class="section">
+      <h2>技术栈</h2>
+      <div class="stack-cols">
+        <div>
+          <h3>后端</h3>
+          <p>Java · Spring Boot · Spring MVC · MyBatis · MySQL · Redis · Maven · JWT</p>
+        </div>
+        <div>
+          <h3>前端</h3>
+          <p>Vue 3 · HTML5 · Axios · Element Plus / Bootstrap</p>
+        </div>
+        <div>
+          <h3>AI</h3>
+          <p>DeepSeek API · RAG（课本检索增强）· Prompt 工程 · Dify 对接思路</p>
+        </div>
+        <div>
+          <h3>工程</h3>
+          <p>Git · Linux 基础 · Tomcat / Nginx 了解 · 模块测试用例</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section contact">
+      <h2>联系</h2>
+      <p>GitHub：<a href="https://github.com/Wyf66669" target="_blank" rel="noopener">@Wyf66669</a></p>
+      <p>仓库：<a href="https://github.com/Wyf66669/ai-application-portfolio" target="_blank" rel="noopener">ai-application-portfolio</a></p>
+      <p class="hint">本页可通过 GitHub Pages 公开访问，适合简历与面试展示。</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 温耀方 · AI Application Portfolio</p>
+  </footer>
+</body>
+</html>
